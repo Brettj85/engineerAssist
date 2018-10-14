@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+    <script src="./javascript/main.js"></script>
+</head>
+<body>
+    
+    <div class="headerContainer">
+        <div class="upperHeader">
+
+        </div>
+        <!--navagation tabs container
+        Pass into mainContentselector() the Div content type ie "home" and maintain 
+        the naming convention for the buttons. Also it must contain the next tabsGridItem.-->
+        <div class="lowerHeader">
+            <div class = "spacer tabsGridItem1"></div><!--Spacer-->
+            <!--Home Tab-->
+            <div id = "homeLink" class = "tabSelectedState tab tabsGridItem2" onclick="mainContentselector('home')">
+                <div id = "homeLinkTop" class="tabDesignActive "></div>
+                <div>Home</div>        
+            </div>
+            <!--Ops Notices Tab-->
+            <div id = "opsLink" class = "tabNonSelectedState tab tabsGridItem3" onclick="mainContentselector('ops')">
+                <div id = "opsLinkTop" class="tabDesignInactive"></div>
+                <div>Ops Notices</div>   
+            </div>
+            <!--Calendar Tab-->
+            <div id = "calendarLink" class = "tabNonSelectedState tab tabsGridItem4" onclick="mainContentselector('calendar')">
+                <div id = "homeLinkTop" class="tabDesignInactive"></div>
+                <div>Calendar</div>
+            </div>
+            <!--Tools Tab-->
+            <div id = "toolsLink" class = "tabNonSelectedState tab tabsGridItem5" onclick="mainContentselector('tools')">
+                <div id = "toolsLinkTop" class="tabDesignInactive"></div>
+                <div>Tools</div>
+            </div>
+            <!--devices Tab (copy this one for another tab)-->
+            <div id = "devicesLink" class = "tabNonSelectedState tab tabsGridItem6" onclick="mainContentselector('devices')">
+                <div id = "devicesLinkTop" class="tabDesignInactive"></div>
+                <div>Devices</div>
+            </div>
+            
+            <!--future tabs Go Here-->
+            
+            <div class = "spacer tabsGridItem7"></div><!--Spacer-->
+        </div>
+    </div>
+    <div class="contentTop"></div>
+    <div class="mainContentContainer">
+    
+    <!--
+    Main Content Divs
+    These are built to be added to. 
+    Their initial state is display none 
+    and this is modified within the 
+    such mainContentselector() JS function by adding the 
+    new items ID to the contentID array or removing an item 
+    from the array the way in wich the divs 
+    are displayed is by copying their inner 
+    html to the main content div. 
+    -->
+
+        <!--Home Div-->
+        <div id = "homeContent" class="home">
+
+        </div>
+        <!--OPS Notice Div-->
+        <div id = "opsContent" class="opsNotice">
+
+        </div>
+        <!--Calendar Div-->
+        <div id = "calendarContent" class="calander">
+
+        </div>
+        <!--Tools Div-->
+        <div id = "toolsContent" class="tools">
+
+        </div>
+    </div>
+    
+    <div class="footerContainer">
+
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+/* --- GLOBAL ---*/
+body{
+    margin: 0;
+}
+
+/* --- Header Initial State. ---*/
+.headerContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    height: 10vh;
+    width: 100%;
+}
+
+.upperHeader{
+    height: 5vh;
+    width: 100%;
+    
+}
+/* --- Tabs --- */
+.tabsGridItem1{
+    grid-area: box1;
+}
+
+.tabsGridItem2{
+    grid-area: box2;
+}
+
+.tabsGridItem3{
+    grid-area: box3;
+}
+
+.tabsGridItem4{
+    grid-area: box4;
+}
+
+.tabsGridItem5{
+    grid-area: box5;
+}
+.tabsGridItem6{
+    grid-area: box6;
+}
+.tabsGridItem7{
+    grid-area: box7;
+}
+.spacer{
+    border-bottom: 1px solid;
+}
+
+.tab{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 1px solid;
+    border-top: 1px solid;
+}
+
+.tabDesignActive{
+    width: 100%; 
+    height: 3px;
+    background-color: #4285f4;
+}
+
+.tabSelectedState{
+    background-color: white;
+}
+
+.tabDesignInactive{
+    width: 100%; 
+    height: 3px;
+    background-color: lightgrey;
+}
+
+.tabNonSelectedState{
+    background-color: lightgrey;
+    border-bottom: 1px solid;
+    box-shadow: -5px;
+}
+
+.lowerHeader >div:nth-last-of-type(2){
+    border-right: 1px solid;
+}
+
+.lowerHeader{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    height: 5vh;
+    width: 100%;
+    grid-template-areas:
+    "box1 box1 box2 box3 box4 box5 box6 box7 box7"
+
+}
+
+/* --- Main Content Initial State. ---*/
+.contentTop{
+    width:100%;
+    height: 2vh;
+}
+.mainContentContainer{
+    position: absolute;
+    top: 12vh;
+    left: 0;
+    height: 83vh;
+    width: 100%;
+}
+
+.home{
+    display: none;
+}
+
+.opsNotice{
+    display: none;
+}
+
+.calendar{
+    display: none;
+}
+
+.tools{
+    display: none;
+}
+
+/* --- Footer Initial State. ---*/
+.footerContainer{
+    position: absolute;
+    top: 95vh;
+    left: 0;
+    height: 5vh;
+    width: 100%;
+    border-top: 2px solid;
+}
