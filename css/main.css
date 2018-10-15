@@ -56,7 +56,7 @@ body{
     justify-content: space-between;
     align-items: center;
     border-left: 1px solid;
-    border-top: 1px solid;
+    
 }
 /* --- active tab vs inactive --- */
 .tabDesignActive{
@@ -78,6 +78,7 @@ body{
 .tabNonSelectedState{
     background-color: lightgrey;
     border-bottom: 1px solid;
+    border-top: 1px solid;
 }
 /* --- setting the fartest button to have a 
 border right --- */
