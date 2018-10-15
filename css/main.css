@@ -45,6 +45,7 @@ body{
 .tabsGridItem7{
     grid-area: box7;
 }
+/* --- Any additional tab would go here --- */
 .spacer{
     border-bottom: 1px solid;
 }
@@ -57,7 +58,7 @@ body{
     border-left: 1px solid;
     border-top: 1px solid;
 }
-
+/* --- active tab vs inactive --- */
 .tabDesignActive{
     width: 100%; 
     height: 3px;
@@ -77,13 +78,16 @@ body{
 .tabNonSelectedState{
     background-color: lightgrey;
     border-bottom: 1px solid;
-    box-shadow: -5px;
 }
-
+/* --- setting the fartest button to have a 
+border right --- */
 .lowerHeader >div:nth-last-of-type(2){
     border-right: 1px solid;
 }
-
+/* --- setting up the grid to place the tabs. 
+Every new tab requires the addition of "1fr"
+to grid-template-columns and the addition of the 
+grid area "box#" between box 7 and its predecessor --- */
 .lowerHeader{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -93,12 +97,14 @@ body{
     "box1 box1 box2 box3 box4 box5 box6 box7 box7"
 
 }
-
-/* --- Main Content Initial State. ---*/
+/* --- This spacer will give the tabs Depth --- */
 .contentTop{
     width:100%;
     height: 2vh;
 }
+
+/* --- Main Content Initial State. ---*/
+
 .mainContentContainer{
     position: absolute;
     top: 12vh;
@@ -111,7 +117,7 @@ body{
     display: none;
 }
 
-.opsNotice{
+.ops{
     display: none;
 }
 
@@ -122,6 +128,28 @@ body{
 .tools{
     display: none;
 }
+.device{
+    display: none;
+}
+
+.homeActive{
+    display: grid;
+}
+
+.opsActive{
+    display: grid;
+}
+
+.calendarActive{
+    display: grid;
+}
+
+.toolsActive{
+    display: grid;
+}
+.deviceActive{
+    display: grid;
+} 
 
 /* --- Footer Initial State. ---*/
 .footerContainer{
@@ -132,3 +160,5 @@ body{
     width: 100%;
     border-top: 2px solid;
 }
+
+/* --- END OF GLOBAL CSS ---*/
