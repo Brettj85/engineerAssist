@@ -28,9 +28,9 @@ function disableAll(){
         //turn off active containers
         var removeOpenContainers =  (contentID[i] + "Active");
         var _check = hasClass(currentTurnDown, removeOpenContainers);
+        console.log(_check);
         if(_check) {
-            //currentTurnDown.classlist.remove(removeOpenContainers);
-            alert("hi");
+            currentTurnDown.classlist.remove(removeOpenContainers);
             break;
         }
         else {
@@ -39,8 +39,10 @@ function disableAll(){
     }
 }
 
-function hasClass(element, classCheck)
+function hasClass(element, classCheck){
+    console.log("in hasClass")
 return (' ' + element.className + ' ').indexOf(' ' + classCheck + ' ') > -1;
+}
 
 function activeTabController(activated){
     //console.log("we have entered active");
