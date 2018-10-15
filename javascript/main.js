@@ -1,5 +1,11 @@
 //GLOBAL JS
-
+var ele_list = document.querySelectorAll(".tab");
+for (var x = 0; x < ele_list.length; x++) {
+ele_list[x].addEventListener("click", function (e) {
+mainContentselector(this.getAttribute("data-origin"));
+e.preventDefault();
+});
+}
 //tab style controller - controls active/inactive tab CSS and the 
 //display of the tabs "contents"
 function mainContentselector(origin){
@@ -8,7 +14,7 @@ function mainContentselector(origin){
     activateContent(origin);
 }
 function disableAll(){
-    //Add new 
+//Add new 
     var contentID = ["home", "ops", "calendar", "tools", "device"];    
     var i;
     for(i=0; i < contentID.length; i++){
@@ -30,18 +36,17 @@ function disableAll(){
         var _check = hasClass(currentTurnDown, removeOpenContainers);
         console.log(_check);
         if(_check) {
-            currentTurnDown.classlist.remove(removeOpenContainers);
+            currentTurnDown.classList.remove(removeOpenContainers);
             break;
         }
         else {
-            
+                
         }
     }
 }
 
 function hasClass(element, classCheck){
-    console.log("in hasClass")
-return (' ' + element.className + ' ').indexOf(' ' + classCheck + ' ') > -1;
+    return (' ' + element.className + ' ').indexOf(' ' + classCheck + ' ') > -1;
 }
 
 function activeTabController(activated){
@@ -57,11 +62,18 @@ function activeTabController(activated){
     currentTabStyleingActive.classList.add("tabDesignActive");
 }
 
-function activateContent(activatedWindow){
+/*?*/function activateContent(activatedWindow){
     var origin = activatedWindow;
-    var currentWindow = (origin + "Content")
+    var currentWindow = (origin + "Content");
+    var currentStyle = (origin);
+    var newStyle = (origin + "Active");
+    var _checkOld = hasClass(currentWindow, currentStyle);
+    var _checkNew = hasClass(currentWindow, newStyle);
     var activatedContainer = document.getElementById(currentWindow);
-    activatedContainer.classList.remove(currentWindow);
-    activatedContainer.classList.add(currentWindow + "Active");
+    if (_checkOld){
+        activatedContainer.classList.remove(currentStyle);
+    }
+    else if(_checkNew === false){
+    	activatedContainer.classList.add(newStyle);
+    }
 }
-

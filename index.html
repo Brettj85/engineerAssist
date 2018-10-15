@@ -6,7 +6,7 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
-    <script src="./javascript/main.js"></script>
+    
 </head>
 <body>
     
@@ -20,27 +20,27 @@
         <div class="lowerHeader">
             <div class = "spacer tabsGridItem1"></div><!--Spacer-->
             <!--Home Tab-->
-            <div id = "homeLink" class = "tabSelectedState tab tabsGridItem2" onclick="mainContentselector('home')">
+            <div id = "homeLink" class = "tabSelectedState tab tabsGridItem2" data-origin = "home">
                 <div id = "homeLinkTop" class="tabDesignActive "></div>
                 <div>Home</div>        
             </div>
             <!--Ops Notices Tab-->
-            <div id = "opsLink" class = "tabNonSelectedState tab tabsGridItem3" onclick="mainContentselector('ops')">
+            <div id = "opsLink" class = "tabNonSelectedState tab tabsGridItem3" data-origin = "ops">
                 <div id = "opsLinkTop" class="tabDesignInactive"></div>
                 <div>Ops Notices</div>   
             </div>
             <!--Calendar Tab-->
-            <div id = "calendarLink" class = "tabNonSelectedState tab tabsGridItem4" onclick="mainContentselector('calendar')">
+            <div id = "calendarLink" class = "tabNonSelectedState tab tabsGridItem4" data-origin = "calendar">
                 <div id = "calendarLinkTop" class="tabDesignInactive"></div>
                 <div>Calendar</div>
             </div>
             <!--Tools Tab-->
-            <div id = "toolsLink" class = "tabNonSelectedState tab tabsGridItem5" onclick="mainContentselector('tools')">
+            <div id = "toolsLink" class = "tabNonSelectedState tab tabsGridItem5" data-origin = "tools">
                 <div id = "toolsLinkTop" class="tabDesignInactive"></div>
                 <div>Tools</div>
             </div>
             <!--devices Tab (copy this one for another tab)-->
-            <div id = "deviceLink" class = "tabNonSelectedState tab tabsGridItem6" onclick="mainContentselector('device')">
+            <div id = "deviceLink" class = "tabNonSelectedState tab tabsGridItem6" data-origin = "device">
                 <div id = "deviceLinkTop" class="tabDesignInactive"></div>
                 <div>Devices</div>
             </div>
@@ -65,7 +65,7 @@
     -->
 
         <!--Home Div-->
-        <div id = "homeContent" class="homeActive">
+        <div id = "homeContent" class="home">
             Home
         </div>
         <!--OPS Notice Div-->
@@ -91,6 +91,6 @@
 
     </div>
 
-
+<script src="./javascript/main.js"></script>
 </body>
 </html>

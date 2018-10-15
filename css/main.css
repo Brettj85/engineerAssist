@@ -45,7 +45,7 @@ body{
 .tabsGridItem7{
     grid-area: box7;
 }
-/* --- Any additional tab would go here --- */
+/* --- Any additional tab would go here "adding a grid item"--- */
 .spacer{
     border-bottom: 1px solid;
 }
