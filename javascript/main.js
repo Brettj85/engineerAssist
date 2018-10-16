@@ -22,7 +22,7 @@ function disableAll(){
     var contentID = ["home", "ops", "calendar", "tools", "device"];    
     var i;
     for(i=0; i < contentID.length; i++){
-        //tirning off all tabs
+        //turning off all tabs
         var currentContainer = contentID[i];
         var currentContainerContent = (currentContainer + "Content");
         var currentContainerLink = (currentContainer + "Link");

@@ -105,7 +105,7 @@ grid area "box#" between box 7 and its predecessor --- */
     height: 5vh;
     width: 100%;
     grid-template-areas:
-    "box1 box1 box2 box3 box4 box5 box6 box7 box7"
+    "box1 box1 box2 box3 box4 box5 box6 box7 box7";
 
 }
 /* --- This spacer will give the tabs Depth --- */
@@ -118,9 +118,9 @@ grid area "box#" between box 7 and its predecessor --- */
 
 .mainContentContainer{
     position: absolute;
-    top: 12vh;
+    top: 10vh;
     left: 0;
-    height: 83vh;
+    height: 85vh;
     width: 100%;
 }
 
@@ -144,7 +144,9 @@ grid area "box#" between box 7 and its predecessor --- */
 }
 
 .homeActive{
-    display: grid;
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .opsActive{
@@ -173,3 +175,108 @@ grid area "box#" between box 7 and its predecessor --- */
 }
 
 /* --- END OF GLOBAL CSS ---*/
+
+/* --- HOME --- */
+.homeGridItem1{
+    grid-area: homebox1;
+}
+
+.homeGridItem2{
+    grid-area: homebox2;
+}
+
+.homeGridItem3{
+    grid-area: homebox3;
+}
+
+.alerts{
+    display: flex;
+    justify-content: center;
+}
+
+.alerts > div{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 70%;
+    text-align: center;
+}
+.alertsContainer > div:nth-of-type(1){
+    font-size: 25px;
+    font-weight: bolder;
+    border: 1px solid;
+    background-color: #4285f4;
+} 
+.alertsContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+    text-align: left;
+}
+
+.searchGridItem1{
+    grid-area: searchbox1;
+}
+
+.searchGridItem2{
+    grid-area: searchbox2;
+}
+
+.searchGridItem3{
+    grid-area: searchbox3;
+}
+
+.search{
+    display: grid;
+    grid-template-columns: 1fr 6fr 5fr;
+    grid-template-areas:
+    "searchbox2 searchbox3 searchbox1";
+}
+
+.selector{
+    background-color: palegreen;
+}
+
+.searchButton{
+    background-image: url(../img/magglass.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.searchInput{
+    background-color: palevioletred
+}
+
+.bookmarks{
+    border: 1px solid;
+}
+
+.flexSpacer{
+    height: 5vh;
+}
+
+.homeInner{
+    width: 100%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 10px;
+    grid-template-areas:
+    "homebox1 homebox1 homebox2"
+    "homebox1 homebox1 homebox3"
+    "homebox1 homebox1 homebox3"
+    "homebox1 homebox1 homebox3"
+    "homebox1 homebox1 homebox3"
+    "homebox1 homebox1 homebox3"
+    "homebox1 homebox1 homebox3"
+    "homebox1 homebox1 homebox3"
+    "homebox1 homebox1 homebox3"
+    "homebox1 homebox1 homebox3"
+    "homebox1 homebox1 homebox3"
+    "homebox1 homebox1 homebox3"
+    "homebox1 homebox1 homebox3"
+    "homebox1 homebox1 homebox3";   
+    
+}
