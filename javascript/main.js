@@ -6,6 +6,10 @@ mainContentselector(this.getAttribute("data-origin"));
 e.preventDefault();
 });
 }
+var openMain = function(){
+    document.getElementById("homeLink").click();
+}
+openMain();
 //tab style controller - controls active/inactive tab CSS and the 
 //display of the tabs "contents"
 function mainContentselector(origin){
@@ -14,7 +18,7 @@ function mainContentselector(origin){
     activateContent(origin);
 }
 function disableAll(){
-//Add new 
+    //Add any new tabs here vvvvv
     var contentID = ["home", "ops", "calendar", "tools", "device"];    
     var i;
     for(i=0; i < contentID.length; i++){
@@ -34,7 +38,6 @@ function disableAll(){
         //turn off active containers
         var removeOpenContainers =  (contentID[i] + "Active");
         var _check = hasClass(currentTurnDown, removeOpenContainers);
-        console.log(_check);
         if(_check) {
             currentTurnDown.classList.remove(removeOpenContainers);
             break;
@@ -50,10 +53,7 @@ function hasClass(element, classCheck){
 }
 
 function activeTabController(activated){
-    //console.log("we have entered active");
     var origin = activated;
-    //console.log("current Origin Variable " + origin);
-    //var currentContentContainer = document.getElementById(origin + "Container");
     var currentTabActive = document.getElementById(origin + "Link");
     var currentTabStyleingActive = document.getElementById(origin + "LinkTop");
     currentTabActive.classList.remove("tabNonSelectedState");
@@ -62,7 +62,7 @@ function activeTabController(activated){
     currentTabStyleingActive.classList.add("tabDesignActive");
 }
 
-/*?*/function activateContent(activatedWindow){
+function activateContent(activatedWindow){
     var origin = activatedWindow;
     var currentWindow = (origin + "Content");
     var currentStyle = (origin);
