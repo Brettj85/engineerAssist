@@ -162,5 +162,5 @@ var preSelected = function(){
 
 preSelected();
 
-alert("MOCK UP - Please open in firefox of chrome")
+alert("MOCK UP - Please open in firefox or chrome")
 
