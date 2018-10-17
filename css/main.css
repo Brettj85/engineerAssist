@@ -344,6 +344,7 @@ grid area "box#" between box 7 and its predecessor --- */
 
 .searchOption{
 border: 2px solid #0073AC;
+cursor: pointer;
 }
 
 .searchOption:hover{
