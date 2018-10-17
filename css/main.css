@@ -255,7 +255,7 @@ grid area "box#" between box 7 and its predecessor --- */
 
 .selector{
     background-color: #8F989A;
-    border: 1px solid #0073AC;
+    border: 3px solid #0073AC;
     text-align: center;
     text-justify: center;
     font-weight: bolder;
@@ -266,7 +266,7 @@ grid area "box#" between box 7 and its predecessor --- */
     background-image: url(../img/magglass.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    border: 1px solid #0073AC;
+    border: 3px solid #0073AC;
     background-color: #8F989A;
     cursor: pointer;
 }
@@ -279,6 +279,7 @@ grid area "box#" between box 7 and its predecessor --- */
     height: 84%;
     border: 1px solid #0073AC;
     color: #0073AC;
+    margin-right: 5px;
 }
 .bookmarks{
     display: flex;
@@ -303,7 +304,7 @@ grid area "box#" between box 7 and its predecessor --- */
     display: block;
     overflow: hidden;
     width: 30%;
-    height: 70%;
+    height: auto;
     top: 7;
     background-color: #8F989A;
     border: 4px solid #0073AC;
@@ -344,11 +345,51 @@ grid area "box#" between box 7 and its predecessor --- */
 }
 
 .searchOption{
-border: 2px solid #0073AC;
+border: 2px solid black;
 cursor: pointer;
 }
 
 .searchOptionActive{
+    background-color: #0073AC;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.lobGridOption1{
+    grid-area: lobsearchbox1;
+}
+.lobGridOption2{
+    grid-area: lobsearchbox2;
+}
+.lobGridOption3{
+    grid-area: lobsearchbox3;
+}
+.lobGridOption4{
+    grid-area: lobsearchbox4;
+}
+
+.searchLob{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
+    grid-template-areas:
+    "lobsearchbox1 lobsearchbox2" 
+    "lobsearchbox3 lobsearchbox4";
+    margin-top: 10px;   
+    margin-bottom: 10px;
+}
+
+.lobSearchOption{
+    border: 2px solid black;
+    cursor: pointer;
+    text-align: center;
+}
+
+.lobSearchOptionActive{
+    border: 2px solid black;
     background-color: #0073AC;
     cursor: pointer;
 }

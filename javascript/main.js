@@ -126,12 +126,41 @@ function addSearchOption(origin){
     
 }
 
+
+//add options to advanced search
+var ele_list = document.querySelectorAll(".lobSearchOption");
+for (var x = 0; x < ele_list.length; x++) {
+ele_list[x].addEventListener("click", function (e) {
+addLOBOption(this.getAttribute("data-origin"));
+e.preventDefault();
+});
+}
+
+function addLOBOption(origin){
+    var currentClick = document.getElementById(origin);
+    var _optionCheck = hasClass(currentClick, "searchOptionActive")
+    if(_optionCheck){
+        currentClick.classList.remove("searchOptionActive");
+        currentClick.classList.add("searchOption");
+    }
+    else{
+        currentClick.classList.add("searchOptionActive");
+        currentClick.classList.remove("searchOption");
+    }
+    
+}
+
 var preSelected = function(){
     document.getElementById("advancedOptionOne").click();
     document.getElementById("advancedOptionTwo").click();
     document.getElementById("advancedOptionThree").click();
+    document.getElementById("advancedOptionHub").click();
+    document.getElementById("advancedOptionCi").click();
+    document.getElementById("advancedOptionVideo").click();
+    document.getElementById("advancedOptionTransport").click();
 }
 
 preSelected();
 
+alert("MOCK UP - Please open in firefox of chrome")
 
