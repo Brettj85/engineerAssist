@@ -313,7 +313,7 @@ grid area "box#" between box 7 and its predecessor --- */
 
 /* --- Advanced Search Options --- */
 .searchLabel{
-    border-bottom: 4px solid #0073AC;
+    border-bottom: 2px solid #0073AC;
     text-align: center;
     font-size: 25px;
 }
