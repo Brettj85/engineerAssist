@@ -275,13 +275,63 @@ grid area "box#" between box 7 and its predecessor --- */
     width: 100%;
     height: 84%;
     border: 1px solid #0073AC;
+    color: #0073AC;
 }
 .bookmarks{
-    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .flexSpacer{
     height: 5vh;
+}
+
+.advancedSearchContainer{
+    position: absolute;
+    height: 0px;
+    top:7;
+    transition: all 1s;
+}
+
+.advancedSearchContainerOpen{
+    position: absolute;
+    width: 30%;
+    height: 70%;
+    top: 7;
+    background-color: #0073AC;
+    border-bottom: 4px solid #8F989A;
+    transition: all 1s;
+}
+
+/* --- Bookmarks --- */
+.bookmarksContainer{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0073AC;
+    height: 100%;
+    border: 3px solid #8F989A;
+}
+
+.bookmarksHeader{
+    font-size: 25px;
+    font-weight: bolder;
+    border-bottom: 6px double #8F989A;
+    background-color: #0073AC;
+    text-align: center;
+}
+
+.bookmark{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+    background-color: #8F989A;
+    border-radius: 3px;
+    width:70%;
+}
+.bookmark:hover{
+    border: 3px solid;
 }
 
 /* --- END OF HOME CSS ---*/

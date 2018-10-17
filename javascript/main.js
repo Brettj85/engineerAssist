@@ -77,3 +77,24 @@ function activateContent(activatedWindow){
     	activatedContainer.classList.add(newStyle);
     }
 }
+
+// Home
+
+var element = document.getElementById("advancedSearch");
+element.addEventListener("click", function (e) {
+openAdvanced(this.getAttribute("data-origin"));
+e.preventDefault();
+});
+
+function openAdvanced(origin){
+    buttonOrigin = document.getElementById(origin);
+    containerPush = document.getElementById(origin + "Container");
+    classToCheck = (origin + "ContainerOpen");
+    var _boolCheck = hasClass(containerPush, classToCheck);
+    if(_boolCheck === false){
+        containerPush.classList.add("advancedSearchContainerOpen");
+    }
+    if(_boolCheck){
+        containerPush.classList.remove("advancedSearchContainerOpen");
+    }
+}
