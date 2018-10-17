@@ -306,16 +306,17 @@ grid area "box#" between box 7 and its predecessor --- */
     height: 70%;
     top: 7;
     background-color: #8F989A;
-    border-bottom: 4px solid #0073AC;
+    border: 4px solid #0073AC;
     transition: all 1s;
 }
 
 /* --- Advanced Search Options --- */
 .searchLabel{
-    border-bottom: 3px solid #0073AC;
+    border-bottom: 4px solid #0073AC;
     text-align: center;
     font-size: 25px;
 }
+
 .searchGridOption1{
     grid-area: searchOptionBox1;
 }
@@ -338,8 +339,8 @@ grid area "box#" between box 7 and its predecessor --- */
     grid-column-gap: 1px;
     grid-template-areas:
     "searchOptionBox1 searchOptionBox2 searchOptionBox3";
-    margin-top: 10px;
-
+    margin-top: 10px;   
+    margin-bottom: 10px;   
 }
 
 .searchOption{
@@ -347,10 +348,11 @@ border: 2px solid #0073AC;
 cursor: pointer;
 }
 
-.searchOption:hover{
-border: 2px solid #8F989A;
-background-color: #0073AC;
+.searchOptionActive{
+    background-color: #0073AC;
+    cursor: pointer;
 }
+
 /* --- Bookmarks --- */
 .bookmarksContainer{
     display:flex;
@@ -377,9 +379,11 @@ background-color: #0073AC;
     border-radius: 3px;
     width:70%;
     cursor: pointer;
+    border: 3px solid #0073AC;
 }
 .bookmark:hover{
-    border: 3px solid;
+    border: 3px solid #0073AC;
+    box-shadow: 0px 5px 5px black;
 }
 
 /* --- END OF HOME CSS ---*/

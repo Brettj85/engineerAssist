@@ -80,6 +80,8 @@ function activateContent(activatedWindow){
 
 // Home
 
+// Advanced Search
+//Open Advanced Search
 var element = document.getElementById("advancedSearch");
 element.addEventListener("click", function (e) {
 openAdvanced(this.getAttribute("data-origin"));
@@ -93,8 +95,43 @@ function openAdvanced(origin){
     var _boolCheck = hasClass(containerPush, classToCheck);
     if(_boolCheck === false){
         containerPush.classList.add("advancedSearchContainerOpen");
+        document.getElementById("advancedSearch").innerHTML = "X";
     }
     if(_boolCheck){
         containerPush.classList.remove("advancedSearchContainerOpen");
+        document.getElementById("advancedSearch").innerHTML = "Advanced Search";
     }
 }
+
+//add options to advanced search
+var ele_list = document.querySelectorAll(".searchOption");
+for (var x = 0; x < ele_list.length; x++) {
+ele_list[x].addEventListener("click", function (e) {
+addSearchOption(this.getAttribute("data-origin"));
+e.preventDefault();
+});
+}
+
+function addSearchOption(origin){
+    var currentClick = document.getElementById(origin);
+    var _optionCheck = hasClass(currentClick, "searchOptionActive")
+    if(_optionCheck){
+        currentClick.classList.remove("searchOptionActive");
+        currentClick.classList.add("searchOption");
+    }
+    else{
+        currentClick.classList.add("searchOptionActive");
+        currentClick.classList.remove("searchOption");
+    }
+    
+}
+
+var preSelected = function(){
+    document.getElementById("advancedOptionOne").click();
+    document.getElementById("advancedOptionTwo").click();
+    document.getElementById("advancedOptionThree").click();
+}
+
+preSelected();
+
+
