@@ -66,7 +66,8 @@ body{
     justify-content: space-between;
     align-items: center;
     border-left: 1px solid #0073AC;
-    font-weight: bolder;    
+    font-weight: bolder; 
+    cursor: pointer;   
 }
 /* --- active tab vs inactive --- */
 .tabDesignActive{
@@ -258,6 +259,7 @@ grid area "box#" between box 7 and its predecessor --- */
     text-align: center;
     text-justify: center;
     font-weight: bolder;
+    cursor: pointer;
 }
 
 .searchButton{
@@ -266,6 +268,7 @@ grid area "box#" between box 7 and its predecessor --- */
     background-size: 100% 100%;
     border: 1px solid #0073AC;
     background-color: #8F989A;
+    cursor: pointer;
 }
 
 .searchInput{
@@ -336,6 +339,7 @@ grid area "box#" between box 7 and its predecessor --- */
     grid-template-areas:
     "searchOptionBox1 searchOptionBox2 searchOptionBox3";
     margin-top: 10px;
+
 }
 
 .searchOption{
@@ -371,6 +375,7 @@ background-color: #0073AC;
     background-color: #8F989A;
     border-radius: 3px;
     width:70%;
+    cursor: pointer;
 }
 .bookmark:hover{
     border: 3px solid;
