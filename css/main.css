@@ -289,6 +289,7 @@ grid area "box#" between box 7 and its predecessor --- */
 
 .advancedSearchContainer{
     position: absolute;
+    display: none;
     height: 0px;
     top:7;
     transition: all 1s;
@@ -296,14 +297,55 @@ grid area "box#" between box 7 and its predecessor --- */
 
 .advancedSearchContainerOpen{
     position: absolute;
+    display: block;
+    overflow: hidden;
     width: 30%;
     height: 70%;
     top: 7;
-    background-color: #0073AC;
-    border-bottom: 4px solid #8F989A;
+    background-color: #8F989A;
+    border-bottom: 4px solid #0073AC;
     transition: all 1s;
 }
 
+/* --- Advanced Search Options --- */
+.searchLabel{
+    border-bottom: 3px solid #0073AC;
+    text-align: center;
+    font-size: 25px;
+}
+.searchGridOption1{
+    grid-area: searchOptionBox1;
+}
+
+.searchGridOption2{
+    grid-area: searchOptionBox2;
+}
+
+.searchGridOption3{
+    grid-area: searchOptionBox3;
+}
+
+.searchAreas{
+    width: 100%;
+    height: auto;
+    display: grid;
+    overflow: hidden;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1px;
+    grid-template-areas:
+    "searchOptionBox1 searchOptionBox2 searchOptionBox3";
+    margin-top: 10px;
+}
+
+.searchOption{
+border: 2px solid #0073AC;
+}
+
+.searchOption:hover{
+border: 2px solid #8F989A;
+background-color: #0073AC;
+}
 /* --- Bookmarks --- */
 .bookmarksContainer{
     display:flex;
