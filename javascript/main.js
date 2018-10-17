@@ -153,7 +153,7 @@ function addLOBOption(origin){
 var preSelected = function(){
     document.getElementById("advancedOptionOne").click();
     document.getElementById("advancedOptionTwo").click();
-    document.getElementById("advancedOptionThree").click();
+    // document.getElementById("advancedOptionThree").click();
     document.getElementById("advancedOptionHub").click();
     document.getElementById("advancedOptionCi").click();
     document.getElementById("advancedOptionVideo").click();
