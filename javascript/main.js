@@ -162,4 +162,56 @@ var preSelected = function(){
 
 preSelected();
 
+var alert_list = document.querySelectorAll(".bookmark");
+for (var i = 0; i < ele_list.length; i++) {
+alert_list[i].addEventListener("click", function (e) {
+mockUpAlert(this.getAttribute("data-origin"));
+e.preventDefault();
+});
+}
+
+var alert_list_update = document.querySelectorAll(".update");
+for (var i = 0; i < ele_list.length; i++) {
+alert_list_update[i].addEventListener("click", function (e) {
+mockUpAlert(this.getAttribute("data-origin"));
+e.preventDefault();
+});
+}
+
+var alert_list_recent = document.querySelectorAll(".recent");
+for (var i = 0; i < ele_list.length; i++) {
+alert_list_recent[i].addEventListener("click", function (e) {
+mockUpAlert(this.getAttribute("data-origin"));
+e.preventDefault();
+});
+}
+
+var alert_list_alert = document.querySelectorAll(".alert");
+for (var i = 0; i < ele_list.length; i++) {
+alert_list_alert[i].addEventListener("click", function (e) {
+mockUpAlert(this.getAttribute("data-origin"));
+e.preventDefault();
+});
+}
+
+function mockUpAlert(origin){
+    var cameFrom = origin; 
+    if(cameFrom === "bookmark"){
+        alert("This will bring you directly to a document that you have added to your bookmarks");
+    }
+    else if(cameFrom === "update"){
+        alert("This will bring you directly to a document that has recently been added or updated");
+
+    }
+    else if(cameFrom === "recent"){
+        alert("This will bring you directly to a document that you have recently viewed");
+    }
+    else if(cameFrom === "alert"){
+        alert("This will bring you directly to a document that we find has compliance issues");
+    }
+    else{
+       
+    }
+}
+// END OF Home
 alert("MOCK UP - Please open in firefox or chrome")
