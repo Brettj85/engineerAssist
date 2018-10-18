@@ -74,7 +74,7 @@ function activateContent(activatedWindow){
         activatedContainer.classList.remove(currentStyle);
     }
     else if(_checkNew === false){
-    	activatedContainer.classList.add(newStyle);
+        activatedContainer.classList.add(newStyle);
     }
 }
 
@@ -149,7 +149,7 @@ function addLOBOption(origin){
     }
     
 }
-
+// stuff
 var preSelected = function(){
     document.getElementById("advancedOptionOne").click();
     document.getElementById("advancedOptionTwo").click();
@@ -213,6 +213,6 @@ function mockUpAlert(origin){
        
     }
 }
-git commit -am 
 // END OF Home
+alert("MOCK UP - Please open in firefox or chrome")
 alert("MOCK UP Please keep in mind this is showing functionality not overall design - Please open in firefox or chrome")
