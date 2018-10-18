@@ -234,6 +234,14 @@ grid area "box#" between box 7 and its predecessor --- */
     text-align: left;
     border: 2px solid black;
 }
+
+.alertsContent > div{
+    background-color: rgba(118, 162, 175, 0.4);
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    height: 100px;
+}
+
 /* --- search --- */
 .searchGridItem1{
     grid-area: searchbox1;
@@ -399,7 +407,7 @@ cursor: pointer;
     display:flex;
     flex-direction: column;
     align-items: center;
-    background-color: white;
+    /* background-color: white; */
     height: 100%;
     border: 2px solid black;
 }
