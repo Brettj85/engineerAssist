@@ -158,10 +158,14 @@ grid area "box#" between box 7 and its predecessor --- */
 
 .opsActive{
     display: grid;
+    width: 100%;
+    height: 100%;
 }
 
 .calendarActive{
     display: grid;
+    width: 100%;
+    height: 100%;
 }
 
 .toolsActive{
@@ -524,3 +528,127 @@ cursor: pointer;
 }
 
 /* --- END OF HOME CSS ---*/
+/* --- OPS CSS --- */
+
+.opsGridItem1{
+    grid-area: opsBox1;
+}
+.opsGridItem2{
+    grid-area: opsBox2;
+}
+.opsGridItem3{
+    grid-area: opsBox3;
+}
+.opsGridItem4{
+    grid-area: opsBox4;
+}
+.opsGridItem5{
+    grid-area: opsBox5;
+}
+.opsGridItem6{
+    grid-area: opsBox6;
+}
+.opsGridItem7{
+    grid-area: opsBox7;
+}
+
+.opsInner{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 1px;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    grid-template-areas:
+    "opsBox1 opsBox1 opsBox1 opsBox2 opsBox2 opsBox2 opsBox2 opsBox2 opsBox2 opsBox3 opsBox3 opsBox3"
+    "opsBox1 opsBox1 opsBox1 opsBox2 opsBox2 opsBox2 opsBox2 opsBox2 opsBox2 opsBox3 opsBox3 opsBox3"
+    "opsBox1 opsBox1 opsBox1 opsBox2 opsBox2 opsBox2 opsBox2 opsBox2 opsBox2 opsBox3 opsBox3 opsBox3"
+    "opsBox1 opsBox1 opsBox1 opsBox2 opsBox2 opsBox2 opsBox2 opsBox2 opsBox2 opsBox3 opsBox3 opsBox3"
+    "opsBox1 opsBox1 opsBox1 opsBox2 opsBox2 opsBox2 opsBox2 opsBox2 opsBox2 opsBox3 opsBox3 opsBox3"
+    "opsBox1 opsBox1 opsBox1 opsBox2 opsBox2 opsBox2 opsBox2 opsBox2 opsBox2 opsBox3 opsBox3 opsBox3"
+    "opsBox4 opsBox4 opsBox4 opsBox4 opsBox5 opsBox5 opsBox5 opsBox5 opsBox6 opsBox6 opsBox6 opsBox6"
+    "opsBox4 opsBox4 opsBox4 opsBox4 opsBox5 opsBox5 opsBox5 opsBox5 opsBox6 opsBox6 opsBox6 opsBox6"
+    "opsBox4 opsBox4 opsBox4 opsBox4 opsBox5 opsBox5 opsBox5 opsBox5 opsBox6 opsBox6 opsBox6 opsBox6"
+    "opsBox4 opsBox4 opsBox4 opsBox4 opsBox5 opsBox5 opsBox5 opsBox5 opsBox6 opsBox6 opsBox6 opsBox6"
+    "opsBox7 opsBox7 opsBox7 opsBox7 opsBox7 opsBox7 opsBox7 opsBox7 opsBox7 opsBox7 opsBox7 opsBox7"
+    "opsBox7 opsBox7 opsBox7 opsBox7 opsBox7 opsBox7 opsBox7 opsBox7 opsBox7 opsBox7 opsBox7 opsBox7"
+}
+
+.opsCurrentAttributes{
+    background-color: red;
+}
+
+.opsCurrentNotice{
+    background-color: rgb(0, 255, 21);
+}
+
+.opsNoticeBookmarks{
+    background-color: rgb(0, 255, 221);
+}
+
+.opsNoticeRecentOne{
+    background-color: rgb(0, 238, 255);
+}
+
+.opsNoticeRecentTwo{
+    background-color: rgb(255, 0, 234);
+}
+
+.opsNoticeRecentThree{
+    background-color: rgb(255, 238, 0);
+}
+
+.opsNoticeFoot{
+    background-color: rgb(255, 123, 0);
+}
+
+/* --- END OF OPS CSS ---*/
+/* --- CALENDAR CSS ---*/
+
+.calendarGridItem1{
+    grid-area: calendarBox1;
+}
+
+.calendarGridItem2{
+    grid-area: calendarBox2;
+}
+
+.calendarGridItem3{
+    grid-area: calendarBox3;
+}
+
+.calendarGridItem4{
+    grid-area: calendarBox4;
+}
+
+.calendarInner{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-column-gap: 1px;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    grid-template-areas:
+    "calendarBox1 calendarBox2 calendarBox3"
+    "calendarBox4 calendarBox4 calendarBox4";
+}
+
+.calendarObjects{
+    background-color: rgb(255, 123, 0);
+}
+
+.calendarMonths{
+    background-color: rgb(208, 255, 0);
+}
+
+.calendarSettings{
+    background-color: rgb(9, 255, 0);
+}
+
+.calendarMain{
+    background-color: rgb(0, 162, 255);
+}

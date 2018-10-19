@@ -214,5 +214,4 @@ function mockUpAlert(origin){
     }
 }
 // END OF Home
-alert("MOCK UP - Please open in firefox or chrome")
 alert("MOCK UP Please keep in mind this is showing functionality not overall design - Please open in firefox or chrome")
